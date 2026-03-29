@@ -3,7 +3,8 @@ using UnityEngine.InputSystem;
 
 public class ClickManager : MonoBehaviour
 {
-    [SerializeField] private float radius = 2f;
+    [SerializeField] private float radius = 1.5f;
+    [SerializeField] private GameObject clickEffectPrefab;
 
     void Update()
     {
@@ -13,7 +14,12 @@ public class ClickManager : MonoBehaviour
 
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
-                
+                if (clickEffectPrefab != null)
+                {
+                    GameObject fx = Instantiate(clickEffectPrefab, hit.point, Quaternion.identity);
+                    Destroy(fx, 1f);
+                }
+
                 if (hit.collider.TryGetComponent<Cube>(out var centerCube))
                     DetachCircle(centerCube);
             }

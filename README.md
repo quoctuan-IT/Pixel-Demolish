@@ -44,22 +44,33 @@ Run file: Pixel-Demolish.exe
 
 ```
 
-
-<div class="container">
-    <hr class="my-4 border-secondary">
-    <div class="row justify-content-center">
-        <div class="col-12 text-center">
-            <p class="mb-2 text-muted">
-                <i class="fas fa-code me-2"></i>
-                Developed by <strong style="color: pink;">Phạm Quốc Tuấn ❤️</strong>
-            </p>
-            <p class="mb-2 text-muted">
-                <i class="fas fa-code me-2"></i>
-                IT - Saigon University
-            </p>
-            <p class="mb-4 text-muted">
-                &copy; 2026 Pixel Demolish. All rights reserved.
-            </p>
-        </div>
-    </div>
+<div align="center">
+    <br />
+    <svg width="100%" height="10" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#0d6efd;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" />
+            </linearGradient>
+        </defs>
+        <rect width="100%" height="4" fill="url(#grad1)" rx="2" />
+    </svg>
+    <br />
+    <p align="center">
+        <img src="https://img.shields.io/badge/C%23-%23239120.svg?style=flat-square&logo=c-sharp&logoColor=white" />
+        <img src="https://img.shields.io/badge/ASP.NET%20Core-512BD4?style=flat-square&logo=logoColor=white" />
+        <img src="https://img.shields.io/badge/Unity-100000?style=flat-square&logo=unity&logoColor=white" />
+    </p>
+    <p>
+        💻 Developed by <strong style="color: #ff69b4;">Phạm Quốc Tuấn</strong> ❤️<br/>
+        🎓 <strong>IT - Saigon University (SGU)</strong>
+    </p>
+    <p>
+        <a href="https://github.com/quoctuan-IT">
+            <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+        </a>
+    </p>
+    <p style="color: #888; font-size: 0.85rem;">
+        &copy; 2026 Pixel Demolish Game. All rights reserved.
+    </p>
 </div>

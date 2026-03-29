@@ -6,10 +6,12 @@ using UnityEngine;
 public class Entity : MonoBehaviour
 {
     private Rigidbody rb;
+    // List Cube
     private Cube[] cubes;
-
-    private int[,] grid; // Save ID cube
-    private Vector3 gridOrigin; // Grid
+    // ID Cube for 2D Map
+    private int[,] grid;
+    // Grid
+    private Vector3 gridOrigin;
 
 
     void Awake()
@@ -29,7 +31,7 @@ public class Entity : MonoBehaviour
         rb.mass = transform.childCount;
     }
 
-    // STEP 1: Read cube
+    // Read all Cube to Create Grid
     void CollectCubes()
     {
         cubes = GetComponentsInChildren<Cube>();
@@ -43,6 +45,7 @@ public class Entity : MonoBehaviour
             max = Vector3.Max(max, child.localPosition);
         }
 
+        // Create grid 2D
         Vector2Int size = Vector2Int.RoundToInt(max - min);
         grid = new int[size.x + 1, size.y + 1];
         gridOrigin = min;
@@ -57,9 +60,10 @@ public class Entity : MonoBehaviour
         }
     }
 
-    // STEP 2: Split Groups
+    // Split Groups
     void Recalculate()
     {
+        // // Get remain Cube
         List<int> remaining = GetRemainingCubeIds();
 
         if (remaining.Count == 0)
@@ -80,7 +84,7 @@ public class Entity : MonoBehaviour
     }
 
 
-    // HELPERS //
+    // Get ID remain Cube
     List<int> GetRemainingCubeIds()
     {
         List<int> ids = new();
@@ -94,6 +98,7 @@ public class Entity : MonoBehaviour
         return ids;
     }
 
+    // Find Cube near by
     List<List<int>> SplitIntoGroups(List<int> ids)
     {
         List<List<int>> groups = new();
@@ -108,6 +113,7 @@ public class Entity : MonoBehaviour
         return groups;
     }
 
+    // Algorithm DFS
     void FloodFill(int startId, List<int> remaining, List<int> group)
     {
         remaining.Remove(startId);
@@ -129,6 +135,7 @@ public class Entity : MonoBehaviour
         }
     }
 
+    // Create new Entity for new Group
     void CreateNewEntities(List<List<int>> groups)
     {
         // Create Group[>0]
@@ -140,21 +147,22 @@ public class Entity : MonoBehaviour
             newEntity.transform.SetPositionAndRotation(firstCube.position, firstCube.rotation);
 
             foreach (int id in groups[i])
-            {
                 cubes[id - 1].transform.parent = newEntity.transform;
-            }
 
             newEntity.AddComponent<Entity>();
         }
     }
 
+    // Detach Cube
     public void DetachCube(Cube cube)
     {
         Vector2Int pos = ToGrid(cube.transform.localPosition);
 
+        // Remove from Grid
         grid[pos.x, pos.y] = 0;
+        // Remove from List
         cubes[cube.Id - 1] = null;
-
+        // Remove from Entity
         cube.transform.parent = null;
 
         Rigidbody cubeRb = cube.gameObject.AddComponent<Rigidbody>();
@@ -163,12 +171,13 @@ public class Entity : MonoBehaviour
         Recalculate();
     }
 
-    // GRID UTILS
+    // Convert from Position to Grid
     Vector2Int ToGrid(Vector3 localPos)
     {
         return Vector2Int.RoundToInt(localPos - gridOrigin);
     }
 
+    // Get Cube near by
     int GetNeighbor(Vector2Int pos, Vector2Int dir)
     {
         Vector2Int p = pos + dir;

@@ -5,7 +5,7 @@ public class EntitySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject entityPrefab;
     // Time
-    [SerializeField] private float spawnInterval = 1f;
+    [SerializeField] private float spawnInterval;
     // Position
     [SerializeField] private Vector3 spawnPosition = new(0, 0, 0);
 
