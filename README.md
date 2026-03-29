@@ -1,5 +1,5 @@
 ## Pixel Demolish 🎮
-## Download 🛠️: https://drive.google.com/drive/u/0/folders/1lEsH9afIDLiP6pJntsuqANrjnC0vUgHT
+## Download 🛠️: https://drive.google.com/drive/folders/1lEsH9afIDLiP6pJntsuqANrjnC0vUgHT
 
 Pixel Demolish is a simple arcade-style game where players destroy voxel-based structures by clicking directly on them.
 Each click detaches cubes from the main entity, triggering physics-based interactions as pieces break apart and fall.
@@ -36,7 +36,7 @@ The game focuses on satisfying destruction mechanics combined with continuous sp
 ```bash
 
 # 1) Download and Extract
-Download https://drive.google.com/drive/u/0/folders/1lEsH9afIDLiP6pJntsuqANrjnC0vUgHT
+Download: https://drive.google.com/drive/folders/1lEsH9afIDLiP6pJntsuqANrjnC0vUgHT
 
 # 2) Play game
 Run file: Pixel-Demolish.exe
