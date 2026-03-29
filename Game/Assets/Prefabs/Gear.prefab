@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8008acd456bc8e47bb5442aad2ac962, type: 2}
+  - {fileID: 2100000, guid: 523d73fccafd7f34f889493a47312def, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -156,7 +156,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8008acd456bc8e47bb5442aad2ac962, type: 2}
+  - {fileID: 2100000, guid: 523d73fccafd7f34f889493a47312def, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 7754130644676059194}
   - component: {fileID: 3161419478659890452}
   - component: {fileID: 747853401403884565}
-  - component: {fileID: 9114906928477174817}
+  - component: {fileID: 6274355424891724436}
   m_Layer: 0
   m_Name: Cylinder (1)
   m_TagString: Untagged
@@ -247,7 +247,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 523d73fccafd7f34f889493a47312def, type: 2}
+  - {fileID: 2100000, guid: 79ee556ee7d5fdf4881566264530e027, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -271,7 +271,7 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &9114906928477174817
+--- !u!95 &6274355424891724436
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -359,7 +359,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8008acd456bc8e47bb5442aad2ac962, type: 2}
+  - {fileID: 2100000, guid: 523d73fccafd7f34f889493a47312def, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -486,7 +486,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8008acd456bc8e47bb5442aad2ac962, type: 2}
+  - {fileID: 2100000, guid: 523d73fccafd7f34f889493a47312def, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -576,7 +576,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 824b1258e8f162d4090fa18167dca740, type: 2}
+  - {fileID: 2100000, guid: 523d73fccafd7f34f889493a47312def, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -610,7 +610,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6498767285004676936}
   - component: {fileID: 465766169458391329}
-  - component: {fileID: 984869184874182292}
+  - component: {fileID: 5646953354922942594}
+  - component: {fileID: 8642182868784901458}
   m_Layer: 0
   m_Name: Gear
   m_TagString: Untagged
@@ -657,7 +658,7 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &984869184874182292
+--- !u!95 &5646953354922942594
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -679,3 +680,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8642182868784901458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6498767285004676941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f86aa6dcdb06e458d6ec372ba0b26e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gear
